@@ -4,14 +4,21 @@ Date: 2021-04-12 21:09:21
 LastEditTime: 2021-04-12 22:05:30
 FilePath: \graduationProject\IM_analyze\test.py
 '''
-# print('中文');
-from bs4 import BeautifulSoup
-import requests
-def getdata():
-    res = requests.get(url,headers = "mingker.cn")
-    soup = BeautifulSoup(res.content,'lxml')
-    return soup
-def main():
-    getdata()
-if __name__ == '__main__':
-    main()
+from flask import Flask
+import pymysql
+
+
+app = Flask(__name__)
+@app.route('/')
+def first_flask():
+    print(1)
+    return "hello word"
+
+@app.route('/caonima')
+def caonima():
+    return "hello word"
+
+first_flask();
+
+if __name__=='__main__':
+    app.run()   
