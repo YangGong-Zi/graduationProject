@@ -81,7 +81,6 @@ def main():
   # data = goods_message_to_file(url_content)
   # data_analysis_to_goods(data)
 
-
 if __name__ == "__main__":
   tbCookies = readTaobaoCookies()
   print(tbCookies)
