@@ -18,6 +18,7 @@ import time
 import pickle
 import os
 
+options = webdriver.ChromeOptions()
 driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 10)
 
@@ -27,14 +28,14 @@ def getTaobaoCookies():
   while True:
     time.sleep(3)
     while driver.current_url == url:
-      tbCookies = driver.get_cookies()
-      driver.quit()
-      cookies = {}
-      for item in tbCookies:
-        cookies[item['name']] = item['value']
-      outputPath = open('taobaoCookies.pickle', 'wb')
-      pickle.dump(cookies, outputPath)
-      outputPath.close()
+      # tbCookies = driver.get_cookies()
+      # driver.quit()
+      # cookies = {}
+      # for item in tbCookies:
+      #   cookies[item['name']] = item['value']
+      # outputPath = open('taobaoCookies.pickle', 'wb')
+      # pickle.dump(cookies, outputPath)
+      # outputPath.close()
       return cookies
 
 def readTaobaoCookies():
@@ -82,15 +83,9 @@ def main():
   # data_analysis_to_goods(data)
 
 if __name__ == "__main__":
-  tbCookies = readTaobaoCookies()
-  print(tbCookies)
-  driver.get("https://www.taobao.com")
-  for cookie in tbCookies:
-    driver.add_cookie({
-      "domain": ".taobao.com",
-      "name": cookie,
-      "value": tbCookies[cookie],
-      "path": '/',
-      "expires": None
-    })
-  driver.get("https://www.taobao.com")
+  # tbCookies = readTaobaoCookies()
+  options.add_argument("C:\\Users\\EDZ\\AppData\\Local\\Google\\Chrome\\User Data")
+  options.add_experimental_option("excludeSwitches", ["ignore-certificate-errors"])
+  driver.maximize_window()
+  driver.get('https://www.taobao.com/')
+  print(driver.get_cookies())
