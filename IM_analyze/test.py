@@ -39,8 +39,8 @@ def getTaobaoCookies():
       return cookies
 
 def readTaobaoCookies():
-  if os.path.exists('taobaoCookies.pickle'):
     readPath = open('taobaoCookies.pickle', 'rb')
+  if os.path.exists('taobaoCookies.pickle'):
     tbCookies = pickle.load(readPath)
   else:
     tbCookies = getTaobaoCookies()
