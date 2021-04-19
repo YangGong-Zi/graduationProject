@@ -1,13 +1,13 @@
 
-Qpython:PrintStatementUsage"-Replace print statement by built-in function.(êü¾
-ppython:S117"[Rename this local variable "vectorLen1" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ì’¬¼
-Qpython:PrintStatementUsage"-Replace print statement by built-in function.(”¿èì
-ppython:S117"VRename this parameter "name2QQ_id" to match the regular expression ^[_a-z][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ
-jpython:S1542"ORename function "getAtInfo" to match the regular expression ^[a-z_][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ
-ppython:S117"[Rename this local variable "vectorLen2" to match the regular expression ^[_a-z][a-z0-9_]*$.(áŞš
-qpython:S117"WRename this parameter "QQ_id2index" to match the regular expression ^[_a-z][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ
-ipython:S1542"SRename function "getSimilarity" to match the regular expression ^[a-z_][a-z0-9_]*$.(°°À…
-rpython:S117"XRename this local variable "atCount" to match the regular expression ^[_a-z][a-z0-9_]*$.(±šîüÿÿÿÿÿ
-mpython:S117"SRename this parameter "objName" to match the regular expression ^[_a-z][a-z0-9_]*$.(„®Õšüÿÿÿÿ
-@python:S1481"%Remove the unused local variable "i".(±šîüÿÿÿÿÿ
-ppython:S117"[Rename this local variable "friendName" to match the regular expression ^[_a-z][a-z0-9_]*$.(‚ÓŒü
+rpython:S117"[Rename this local variable "vectorLen1" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ì’¬¼
+Bpython:S1481"%Remove the unused local variable "i".(±šîüÿÿÿÿÿ
+Spython:PrintStatementUsage%"-Replace print statement by built-in function.(”¿èì
+tpython:S117"XRename this local variable "atCount" to match the regular expression ^[_a-z][a-z0-9_]*$.(±šîüÿÿÿÿÿ
+rpython:S117"[Rename this local variable "vectorLen2" to match the regular expression ^[_a-z][a-z0-9_]*$.(áŞš
+kpython:S1542"SRename function "getSimilarity" to match the regular expression ^[a-z_][a-z0-9_]*$.(°°À…
+lpython:S1542"ORename function "getAtInfo" to match the regular expression ^[a-z_][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ
+Spython:PrintStatementUsage&"-Replace print statement by built-in function.(êü¾
+spython:S117"WRename this parameter "QQ_id2index" to match the regular expression ^[_a-z][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ
+rpython:S117!"[Rename this local variable "friendName" to match the regular expression ^[_a-z][a-z0-9_]*$.(‚ÓŒü
+opython:S117+"SRename this parameter "objName" to match the regular expression ^[_a-z][a-z0-9_]*$.(„®Õšüÿÿÿÿ
+rpython:S117"VRename this parameter "name2QQ_id" to match the regular expression ^[_a-z][a-z0-9_]*$.(Œ±ÃËÿÿÿÿÿ

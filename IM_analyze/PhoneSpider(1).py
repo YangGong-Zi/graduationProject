@@ -29,7 +29,7 @@ class PhoneSpider:
         """爬取手机信息"""
         phone_infos_list = list()
         # 设置谷歌无界面浏览器
-        path = r'C:\Users\cyh\AppData\Local\Google\Chrome\Application\chromedriver'
+        path = r'C:\Users\EDZ\AppData\Local\Programs\Python\Python39\Scripts\chromedriver'
         chrome_options = Options()
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         chrome_options.add_argument('--headless')
@@ -48,14 +48,15 @@ class PhoneSpider:
         driver.find_element_by_xpath('//*[@id="fm-login-password"]').send_keys(password)
         # 点击登录
         driver.find_element_by_xpath('//*[@id="login-form"]/div[4]/button').click()
-        # 执行休眠3s等待浏览器的加载
+        # 执行休眠10s等待浏览器的加载
         time.sleep(10)
         response_text = driver.page_source
         response = etree.HTML(response_text)
+        # print(response)
         for i in range(1, 3):
             base_xpath = response.xpath('//div[@class="J_TItems"]/div[@class="item4line1"][{}]/dl'.format(i))
             for dl in base_xpath:
-                phone_name = dl.xpath('./dd[@class="detail"]/a/text()')[0].split('】')[1].strip()
+                phone_name = dl.xpath('./dd[@class="detail"]/a/text()')[0]
                 phone_price = dl.xpath('./dd/div/div[1]/span[2]/text()')[0].strip()
                 sale_num = dl.xpath('./dd/div/div[3]/span/text()')[0]
                 rates = dl.xpath('./dd/div/h4/a/span/text()')[0].split(':')[1].strip()
@@ -185,8 +186,8 @@ class PhoneSpider:
 
 
 if __name__ == '__main__':
-    user_name = ''
-    password = ''
+    user_name = '15736392041'
+    password = 'cf1210'
     phone_infos = PhoneSpider()
     result = phone_infos.parse_infos(user_name, password)
     print(result)
