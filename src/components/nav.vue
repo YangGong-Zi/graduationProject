@@ -14,10 +14,6 @@ export default {
   data () {
     return {
       items: [
-        {name: '通信1502班关键词分析', ad: 'wordcloud'},
-        {name: '最喜爱建筑分布', ad: 'building'},
-        {name: '最喜爱食堂分布', ad: 'canteen'},
-        {name: '最常自习地点分布', ad: 'selfstudy'},
         {name: '课程难度调查', ad: 'difficult'},
         {name: '课程兴趣调查', ad: 'interest'},
         {name: '寝室学习氛围', ad: 'bedroom'},

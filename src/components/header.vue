@@ -3,7 +3,7 @@
     <div class="top-bar clearfix">
       <div class="topbar-nav">
         <ul class="nav-wrap">
-          <li class="nav">一个班主任对学生做的小调查</li>
+          <li class="nav">数据分析</li>
         </ul>
       </div>
       <div v-if="hasLogin" class="topbar-info">
@@ -28,7 +28,7 @@
         hasLogin: this.$store.state.user.hasLogin
       };
     },
-    computed: { 
+    computed: {
       hasLogin() {
         return this.$store.state.login.hasLogin ? this.$store.state.login.hasLogin : this.$store.state.user.hasLogin;
       },
@@ -41,7 +41,7 @@
       toLogin() {
         // this.islogin = true;
         // // 给父组件传递信息
-        // this.$parent.$emit('to-login', { text: this.islogin})  
+        // this.$parent.$emit('to-login', { text: this.islogin})
         this.enableLogin();
       },
       toLogout() {
