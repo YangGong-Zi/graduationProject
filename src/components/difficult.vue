@@ -165,6 +165,9 @@
             }
           ]
         });
+      },
+      getData(){
+
       }
     },
     mounted() {
@@ -175,7 +178,7 @@
           this.drawpie('difficultpie', '70%', '60%');
         }
         this.drawbar('difficultbar');
-        
+
         var that = this;
         var resizeTimer = null;
         window.onresize = function() {
@@ -190,7 +193,7 @@
             that.drawbar('difficultbar');
           }, 100);
         }
-      });     
+      });
     }
   }
 </script>
@@ -206,7 +209,7 @@
     border: solid #faf6f3 2px;
     box-shadow: 0 0 10px #F7D098;
     border-radius: 10px;
-  }  
+  }
   #difficultbar {
     margin-top: 30px;
   }
