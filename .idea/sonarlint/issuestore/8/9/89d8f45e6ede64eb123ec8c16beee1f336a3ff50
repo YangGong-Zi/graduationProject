@@ -1,14 +1,14 @@
 
-wpython:S117*"YRename this local variable "readPath" to match the regular expression ^[_a-z][a-z0-9_]*$.(œÌŒ®8Ã£Ùø/
-Bpython:S125V"Remove this commented out code.(ò‡î¨úÿÿÿÿ8óŒëù/
 =python:S125"Remove this commented out code.(¡ôª£8Ÿ›ßù/
-zpython:S1542"VRename function "getTaobaoCookies" to match the regular expression ^[a-z_][a-z0-9_]*$.(ŸÀÏ¢üÿÿÿÿ8æÒø/
-Bpython:S1254"Remove this commented out code.(“ãÜ¬ıÿÿÿÿ8»µì/
-Ppython:S1751"1Refactor this loop to do more than one iteration.(î°£Û8¸ø/
-xpython:S117,"ZRename this local variable "tbCookies" to match the regular expression ^[_a-z][a-z0-9_]*$.(…Ö¬µ8Ã£Ùø/
-\python:S5754K"8Catch a more specific exception or reraise the exception(ê¥Ğ…úÿÿÿÿ8»µì/
-=python:S125R"Remove this commented out code.(Ş¯8õÖ×ê/
-=python:S125G"Remove this commented out code.(Ø­˜8Úµî/
-=python:S125"Remove this commented out code.(Á”ç8»µì/
+wpython:S117*"YRename this local variable "readPath" to match the regular expression ^[_a-z][a-z0-9_]*$.(œÌŒ®8Ã£Ùø/
 {python:S1542)"WRename function "readTaobaoCookies" to match the regular expression ^[a-z_][a-z0-9_]*$.(äúèÇùÿÿÿÿ8Ã£Ùø/
+=python:S125G"Remove this commented out code.(Ø­˜8Úµî/
+Ppython:S1751"1Refactor this loop to do more than one iteration.(î°£Û8¸ø/
+Bpython:S125V"Remove this commented out code.(ò‡î¨úÿÿÿÿ8óŒëù/
+Bpython:S1254"Remove this commented out code.(“ãÜ¬ıÿÿÿÿ8»µì/
 Npython:S1481Q"/Remove the unused local variable "url_content".(» ÉÓ8õÖ×ê/
+=python:S125R"Remove this commented out code.(Ş¯8õÖ×ê/
+=python:S125"Remove this commented out code.(Á”ç8»µì/
+\python:S5754K"8Catch a more specific exception or reraise the exception(ê¥Ğ…úÿÿÿÿ8»µì/
+xpython:S117,"ZRename this local variable "tbCookies" to match the regular expression ^[_a-z][a-z0-9_]*$.(…Ö¬µ8Ã£Ùø/
+zpython:S1542"VRename function "getTaobaoCookies" to match the regular expression ^[a-z_][a-z0-9_]*$.(ŸÀÏ¢üÿÿÿÿ8æÒø/
