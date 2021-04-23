@@ -30,13 +30,13 @@
     },
     data() {
       return {
-        canlogin: false
+        // canlogin: false
       };
     },
     computed: {
-      canlogin() {
-        return this.$store.state.login.islogin;
-      }
+      // canlogin() {
+      //   return this.$store.state.login.islogin;
+      // }
     }
     // methods: {
     //   toLogin(islogin) {

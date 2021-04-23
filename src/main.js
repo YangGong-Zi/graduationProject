@@ -2,9 +2,10 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import store from './store/store';
-
+import axios from 'axios';
+Vue.prototype.$axios = axios
 Vue.use(VueRouter);
-
+axios.defaults.baseURL ="/api"
 // 定义路由组件
 const Worldcloud = require('components/cloud.vue');
 const Building = require('components/building.vue');

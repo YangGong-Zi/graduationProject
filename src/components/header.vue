@@ -29,12 +29,12 @@
       };
     },
     computed: {
-      hasLogin() {
-        return this.$store.state.login.hasLogin ? this.$store.state.login.hasLogin : this.$store.state.user.hasLogin;
-      },
-      user() {
-        return this.$store.state.user;
-      }
+      // hasLogin() {
+      //   return this.$store.state.login.hasLogin ? this.$store.state.login.hasLogin : this.$store.state.user.hasLogin;
+      // },
+      // user() {
+      //   return this.$store.state.user;
+      // }
     },
     methods: {
       ...mapActions(['enableLogin', 'logOut', 'loginFail']),

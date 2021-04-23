@@ -9,7 +9,7 @@
   import echarts from 'echarts';
   import '../../node_modules/echarts/theme/vintage.js';
   import data from 'static/data/data.json';
-
+  import axios from "axios"
   export default {
     data() {
       return {
@@ -167,7 +167,12 @@
         });
       },
       getData(){
-
+        axios({
+            methods:"GET",
+            url:"/getData"
+        }).then((res) => {
+          console.log(res);
+        })
       }
     },
     mounted() {
@@ -194,6 +199,7 @@
           }, 100);
         }
       });
+      this.getData();
     }
   }
 </script>

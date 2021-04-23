@@ -11,6 +11,7 @@
     "test": "npm run unit"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^3.3.7",
     "echarts": "^3.3.0",
     "echarts-wordcloud": "^1.0.2",
