@@ -168,10 +168,10 @@
       },
       getData(){
         axios({
-            methods:"GET",
+            methods:"POST",
             url:"/getData"
         }).then((res) => {
-          console.log(res);
+          console.log(res.data);
         })
       }
     },

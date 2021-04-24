@@ -19,7 +19,7 @@ def first_flask():  # 视图函数
   return "load_dict "  # response
 
 
-@app.route('/getData', )  # 路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)
+@app.route('/getData',methods=["POST"] )  # 路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)
 def getData():  # 视图函数
   with open("data.json", 'r') as f:
     # print(type(f))

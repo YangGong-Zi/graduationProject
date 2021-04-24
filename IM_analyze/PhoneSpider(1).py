@@ -9,10 +9,11 @@ from selenium import webdriver
 from pathlib import Path
 from lxml import etree
 from collections import defaultdict, OrderedDict
-
+#encoding:utf8
 
 class PhoneSpider:
-  """爬取天猫华为手机信息
+  """
+      爬取天猫华为手机信息
       1.爬取字段:名称,价格,销量,评价
       2.只有一页数据,采取单线程,不考虑抓取效率
       3.数据结果以[{}, {}, {}, ..]形式存在
@@ -24,11 +25,43 @@ class PhoneSpider:
     # self.login_url = 'https://login.tmall.com/' \
     #                  '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
     #                  '%2Fcategory-1350276998-1662001527.htm%3FcatId%3D1350276998%26pageNo%3D1'
-    self.login_url = 'https://login.tmall.com/' \
-                     '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
-                     '%2Fcategory-1350284311-1662001527.htm%3FcatId%3D1201482770%26pageNo%3D1'
+    # self.login_url = 'https://login.tmall.com/' \
+    #                  '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
+    #                  '%2Fcategory-1350284311-1662001527.htm%3FcatId%3D1201482770%26pageNo%3D1'
+    self.login_url = 'https://huaweistore.tmall.com/index.htm?spm=a1z10.5-b-s.w20163031-23245066575.17.3e301664w8WlSu'
     # 参数pageNo=1对应第几页数据
     # self.url = 'https://huaweistore.tmall.com/category-1350276998-1662001527.htm?catId=1350276998&pageNo=1'
+  def getHuaweiUrl(self):
+    phone_infos_list = list()
+    # 设置谷歌无界面浏览器
+    path = r'C:\Users\EDZ\AppData\Local\Programs\Python\Python39\Scripts\chromedriver'
+    # path = r'C:\Users\Cistella\AppData\Local\Programs\Python\Python39\Scripts\chromedriver'
+    chrome_options = Options()
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(executable_path=path, options=chrome_options)
+    # 关闭开发者模式
+    driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+      "source": """Object.defineProperty(navigator, 'webdriver', {get: () => undefined})""",
+    })
+    url = "https://huaweistore.tmall.com/index.htm?spm=a1z10.1-b-s.w20163031-23245066575.17.4e977597KlH6Ca"
+    driver.get(url)
+    time.sleep(10)
+    response_text = driver.page_source
+    response = etree.HTML(response_text)
+    res = etree.tostring(response)
+    # print(res)
+    baseXpath = response.xpath('//*[@id="shop23245066575"]/div/div[2]/div/div/a/@href')
+    print(baseXpath)
+    # print("http://www.yunxiaojie.cn" + baseXpath[0])
+    # for i in baseXpath:
+    #   driver.get("http://www.yunxiaojie.cn" + i)
+    #   res_1 = etree.HTML(driver.page_source)
+    #   name = res_1.xpath('//span[@class="cor-orange"]/text()')
+    #   print(name)
+      # with open("name.txt", "w") as json_file:
+      #   json_file.write(name[0])
 
   def parse_infos(self, user_name, password):
     """爬取手机信息"""
@@ -58,7 +91,13 @@ class PhoneSpider:
     time.sleep(10)
     response_text = driver.page_source
     response = etree.HTML(response_text)
-    print(response)
+    # res = etree.tostring(response)
+    # # print(res.decode('utf-8'))
+    # baseXpath = response.xpath('//*[@id="shop23245066575"]/div/div[2]/div/div/a/@href')
+    # print(baseXpath)
+    # for i in baseXpath:
+    #   print(i)
+
     for i in range(1, 3):
       base_xpath = response.xpath('//div[@class="J_TItems"]/div[@class="item4line1"][{}]/dl'.format(i))
       for dl in base_xpath:
@@ -202,5 +241,7 @@ if __name__ == '__main__':
   user_name = '15736392041'
   password = 'cf1210'
   phone_infos = PhoneSpider()
-  result = phone_infos.parse_infos(user_name, password)
-  print(result)
+  # result = phone_infos.parse_infos(user_name, password)
+  result = phone_infos.getHuaweiUrl()
+  # print(result)
+
