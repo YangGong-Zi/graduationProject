@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="difficultpie"></div>
-    <div id="difficultbar"></div>
+<!--    <div id="difficultbar"></div>-->
   </div>
 </template>
 
@@ -168,7 +168,7 @@
       },
       getData(){
         axios({
-            methods:"POST",
+            methods:"GET",
             url:"/getData"
         }).then((res) => {
           console.log(res.data);

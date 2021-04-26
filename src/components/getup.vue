@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="getupbar"></div>
-    <div id="getuppie"></div>
+<!--    <div id="getuppie"></div>-->
   </div>
 </template>
 
@@ -29,7 +29,7 @@
                 type: ['line', 'bar']
               },
               saveAsImage: {},
-              dataView: {}             
+              dataView: {}
             },
             right: 15,
             top: 10
@@ -50,13 +50,13 @@
           yAxis: [
             {
               type: 'value',
-              name: '人数',
-              max: 20
+              name: '销量',
+
             }
           ],
           series: [
             {
-              name: '起床时间',
+              name: '销量',
               type: 'bar',
               label: {
                 normal: {
@@ -123,7 +123,7 @@
         } else {
           this.drawpie('getuppie', '60%');
         }
-        
+
         var that = this;
         var resizeTimer = null;
         window.onresize = function() {
@@ -152,7 +152,7 @@
     margin-left: -45%;
     box-shadow: 0 0 10px #BF382A;
     border-radius: 10px;
-  }  
+  }
   #getuppie {
     margin-top: 30px;
   }

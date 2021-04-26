@@ -14,14 +14,14 @@ app = Flask(__name__)  # 创建1个Flask实例
 
 @app.route('/')  # 路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)
 def first_flask():  # 视图函数
-  # with open("data.json", 'r', encoding='UTF-8') as f:
+  # with open("data1.json", 'r', encoding='UTF-8') as f:
   #   load_dict = json.load(f)
   return "load_dict "  # response
 
 
-@app.route('/getData',methods=["POST"] )  # 路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)
+@app.route('/getData',methods=["GET"] )  # 路由系统生成 视图对应url,1. decorator=app.route() 2. decorator(first_flask)
 def getData():  # 视图函数
-  with open("data.json", 'r') as f:
+  with open("data1.json", 'r') as f:
     # print(type(f))
     load_dict = json.load(f)
     print(load_dict)

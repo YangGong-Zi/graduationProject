@@ -25,7 +25,7 @@ const Onlyme = require('components/onlyme.vue');
 
 // 定义路由
 const routes = [
-  { path: '/', redirect: '/difficult' },
+  { path: '/', redirect: '/getup' },
   { path: '/wordcloud', component: Worldcloud },
   { path: '/building', component: Building },
   { path: '/canteen', component: Canteen },

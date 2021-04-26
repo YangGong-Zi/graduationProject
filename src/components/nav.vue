@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       items: [
-        {name: '课程难度调查', ad: 'difficult'},
+        {name: '华为', ad: 'getup'},
         {name: '课程兴趣调查', ad: 'interest'},
         {name: '寝室学习氛围', ad: 'bedroom'},
         {name: '毕业展望', ad: 'graduate'},

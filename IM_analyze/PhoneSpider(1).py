@@ -9,7 +9,9 @@ from selenium import webdriver
 from pathlib import Path
 from lxml import etree
 from collections import defaultdict, OrderedDict
-#encoding:utf8
+
+
+# encoding:utf8
 
 class PhoneSpider:
   """
@@ -20,17 +22,18 @@ class PhoneSpider:
   """
 
   def __init__(self):
-    self.headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36\
-                        (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36"}
+    self.headers = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"}
     # self.login_url = 'https://login.tmall.com/' \
     #                  '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
     #                  '%2Fcategory-1350276998-1662001527.htm%3FcatId%3D1350276998%26pageNo%3D1'
-    # self.login_url = 'https://login.tmall.com/' \
-    #                  '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
-    #                  '%2Fcategory-1350284311-1662001527.htm%3FcatId%3D1201482770%26pageNo%3D1'
-    self.login_url = 'https://huaweistore.tmall.com/index.htm?spm=a1z10.5-b-s.w20163031-23245066575.17.3e301664w8WlSu'
+    self.login_url = 'https://login.tmall.com/' \
+                     '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
+                     '%2Fcategory-1350284311-1662001527.htm%3FcatId%3D1201482770%26pageNo%3D1'
+    # self.login_url = 'https://huaweistore.tmall.com/index.htm?spm=a1z10.5-b-s.w20163031-23245066575.17.3e301664w8WlSu'
     # 参数pageNo=1对应第几页数据
     # self.url = 'https://huaweistore.tmall.com/category-1350276998-1662001527.htm?catId=1350276998&pageNo=1'
+
   def getHuaweiUrl(self):
     phone_infos_list = list()
     # 设置谷歌无界面浏览器
@@ -60,8 +63,8 @@ class PhoneSpider:
     #   res_1 = etree.HTML(driver.page_source)
     #   name = res_1.xpath('//span[@class="cor-orange"]/text()')
     #   print(name)
-      # with open("name.txt", "w") as json_file:
-      #   json_file.write(name[0])
+    # with open("name.txt", "w") as json_file:
+    #   json_file.write(name[0])
 
   def parse_infos(self, user_name, password):
     """爬取手机信息"""
@@ -116,7 +119,7 @@ class PhoneSpider:
         phone_infos_list.append(phone_infos_dict)
     strjson = {"data": phone_infos_list}
     driver.close()
-    # os.mknod("data.json")
+    # os.mknod("data1.json")
     json_str = json.dumps(strjson, indent=4, ensure_ascii=False)
     with open("data.json", "w") as json_file:
       json_file.write(json_str)
@@ -241,7 +244,6 @@ if __name__ == '__main__':
   user_name = '15736392041'
   password = 'cf1210'
   phone_infos = PhoneSpider()
-  # result = phone_infos.parse_infos(user_name, password)
-  result = phone_infos.getHuaweiUrl()
-  # print(result)
-
+  result = phone_infos.parse_infos(user_name, password)
+  res = phone_infos.getHuaweiUrl()
+  print(result)
