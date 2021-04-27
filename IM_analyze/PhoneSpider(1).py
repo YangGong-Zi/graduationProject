@@ -56,7 +56,7 @@ class PhoneSpider:
     res = etree.tostring(response)
     # print(res)
     baseXpath = response.xpath('//*[@id="shop23245066575"]/div/div[2]/div/div/a/@href')
-    print(baseXpath)
+    # print(baseXpath)
     # print("http://www.yunxiaojie.cn" + baseXpath[0])
     # for i in baseXpath:
     #   driver.get("http://www.yunxiaojie.cn" + i)
