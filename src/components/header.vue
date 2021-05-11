@@ -6,14 +6,14 @@
           <li class="nav">数据分析</li>
         </ul>
       </div>
-      <div v-if="hasLogin" class="topbar-info">
-        <span>{{user.name}}欢迎你</span>
-        <span>|</span>
-        <button @click="toLogout">退出</button>
-      </div>
-      <div v-else class="topbar-info">
-        <button @click="toLogin">登录</button>
-      </div>
+<!--      <div v-if="hasLogin" class="topbar-info">-->
+<!--        <span>{{user.name}}欢迎你</span>-->
+<!--        <span>|</span>-->
+<!--        <button @click="toLogout">退出</button>-->
+<!--      </div>-->
+<!--      <div v-else class="topbar-info">-->
+<!--        <button @click="toLogin">登录</button>-->
+<!--      </div>-->
     </div>
   </header>
 </template>

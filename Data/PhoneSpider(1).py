@@ -24,9 +24,7 @@ class PhoneSpider:
   def __init__(self):
     self.headers = {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"}
-    # self.login_url = 'https://login.tmall.com/' \
-    #                  '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
-    #                  '%2Fcategory-1350276998-1662001527.htm%3FcatId%3D1350276998%26pageNo%3D1'
+
     self.login_url = 'https://login.tmall.com/' \
                      '?spm=a1z10.15-b-s.a2226mz.2.3a376a0clcjfzN&redirectURL=https%3A%2F%2Fhuaweistore.tmall.com' \
                      '%2Fcategory-1350284311-1662001527.htm%3FcatId%3D1201482770%26pageNo%3D1'
@@ -94,12 +92,6 @@ class PhoneSpider:
     time.sleep(10)
     response_text = driver.page_source
     response = etree.HTML(response_text)
-    # res = etree.tostring(response)
-    # # print(res.decode('utf-8'))
-    # baseXpath = response.xpath('//*[@id="shop23245066575"]/div/div[2]/div/div/a/@href')
-    # print(baseXpath)
-    # for i in baseXpath:
-    #   print(i)
 
     for i in range(1, 3):
       base_xpath = response.xpath('//div[@class="J_TItems"]/div[@class="item4line1"][{}]/dl'.format(i))
@@ -245,5 +237,5 @@ if __name__ == '__main__':
   password = 'cf1210'
   phone_infos = PhoneSpider()
   result = phone_infos.parse_infos(user_name, password)
-  res = phone_infos.getHuaweiUrl()
+  # res = phone_infos.getHuaweiUrl()
   print(result)

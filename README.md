@@ -1,15 +1,15 @@
 # graduationProject
 
 
-> 使用vue2.0、vuex、vue-router2.0、echarts等搭建的一个数据展示平台
+> 使用vue、echarts等搭建的一个数据展示平台
 > 不支持IE8及其以下版本，单页面应用
-> 基于vuex实现了简单的登录功能
+> 基于Vue框架和Python实现了简单的数据可视化
 
 ## 运行步骤
 
 ``` bash
 # 安装依赖
-npm install 
+npm install
 
 # 在本地启动服务，并且通过localhost:8080地址进行访问
 npm run dev
@@ -24,15 +24,11 @@ npm run unit
 ## 源码说明
 ```
 .
-|-- IM_analyze                       // 用python进行群聊数据分析的相关代码
+|-- Data                        // python相关代码
 |-- build                            // 项目构建相关代码
 |-- config                           // 项目开发环境配置
 |-- src                              // 源码目录
 |   |-- components                   // vue公共组件
-|   |-- store                        // vuex的状态管理
-|       |-- store.js                 // 加载各种store模块
-|       |-- login.js                 // 登录状态相关store
-|       |-- user.js                  // 用户相关store
 |   |-- App.vue                      // 页面入口文件
 |   |-- main.js                      // 程序入口文件，加载各种公共组件
 |-- static

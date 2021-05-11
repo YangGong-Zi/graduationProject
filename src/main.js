@@ -15,7 +15,7 @@ const Difficult = require('components/difficult.vue');
 const Interest = require('components/interest.vue');
 const Bedroom = require('components/bedroom.vue');
 const Graduate = require('components/graduate.vue');
-const Getup = require('components/getup.vue');
+const Huawei= require('src/components/Huawei.vue');
 const Gotobed = require('components/gotobed.vue');
 const Eat = require('components/eat.vue');
 const Amuse = require('components/amuse.vue');
@@ -34,7 +34,7 @@ const routes = [
   { path: '/interest', component: Interest },
   { path: '/bedroom', component: Bedroom },
   { path: '/graduate', component: Graduate },
-  { path: '/getup', component: Getup },
+  { path: '/Huawei', component: Huawei },
   { path: '/gotobed', component: Gotobed },
   { path: '/eat', component: Eat },
   { path: '/amuse', component: Amuse },

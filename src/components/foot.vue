@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Copyright © <span>Hieeyh</span> 2016 </p>
+    <p>179100202-杨洋 </p>
   </footer>
 </template>
 
@@ -16,7 +16,7 @@
     color: #777;
   }
   p {
-    margin-left: 24px;
+    text-align: center;
     line-height: 40px;
     font-size: 12px;
   }

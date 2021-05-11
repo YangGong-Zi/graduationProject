@@ -1,0 +1,12 @@
+
+xpython:S1178"ZRename this local variable "baseXpath" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ù·¶Ü8Ò¦Õª“/
+mpython:S100#"PRename method "getHuaweiUrl" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ì¿¨.8Ò¦Õª“/
+Lpython:S14818"-Remove the unused local variable "baseXpath".(Ù·¶Ü8Ò¦Õª“/
+Xpython:S1481$"4Remove the unused local variable "phone_infos_list".(‹›äûÿÿÿÿ8Ò¦Õª“/
+Epython:S14816"'Remove the unused local variable "res".(ÆÏ™8Ò¦Õª“/
+Bpython:S125'"Remove this commented out code.(¢¦›şÿÿÿÿ8Ó¦Õª“/
+Bpython:S1259"Remove this commented out code.(ÑÔ‚˜ùÿÿÿÿ8Ó¦Õª“/
+Bpython:S125H"Remove this commented out code.(¢¦›şÿÿÿÿ8Ó¦Õª“/
+Bpython:S125e"Remove this commented out code.(¼œüÿÿÿÿ8Ô¦Õª“/
+=python:S125g"Remove this commented out code.(À¿± 8Ô¦Õª“/
+Cpython:S125ğ"Remove this commented out code.(ÛÔ€Éøÿÿÿÿ8†ç¢Ù”/

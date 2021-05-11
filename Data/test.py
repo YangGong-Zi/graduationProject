@@ -5,7 +5,7 @@ LastEditTime: 2021-04-17 00:05:23
 FilePath: \graduationProject\IM_analyze\test.py
 '''
 from flask import Flask
-import pymysql
+# import pymysql
 import re
 import json
 

@@ -14,11 +14,11 @@ export default {
   data () {
     return {
       items: [
-        {name: '华为', ad: 'getup'},
-        {name: '课程兴趣调查', ad: 'interest'},
-        {name: '寝室学习氛围', ad: 'bedroom'},
-        {name: '毕业展望', ad: 'graduate'},
-        {name: '工作日起床时间', ad: 'getup'},
+        {name: '华为', ad: 'Huawei'},
+        {name: '苹果', ad: 'interest'},
+        {name: '小米', ad: 'bedroom'},
+        {name: 'OPPO', ad: 'graduate'},
+        {name: 'Vivo', ad: 'Huawei'},
         {name: '工作日睡觉时间', ad: 'gotobed'},
         {name: '每日在校吃饭花销', ad: 'eat'},
         {name: '周末娱乐方式', ad: 'amuse'},

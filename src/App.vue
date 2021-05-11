@@ -7,7 +7,7 @@
     <!-- 遮罩层 -->
     <my-mask v-if="canlogin"></my-mask>
     <!-- 登录界面 -->
-    <my-login v-if="canlogin"></my-login>
+<!--    <my-login v-if="canlogin"></my-login>-->
     <my-foot></my-foot>
 </div>
 </template>
