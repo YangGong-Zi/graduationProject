@@ -25,7 +25,12 @@ const Onlyme = require('components/onlyme.vue');
 
 // 定义路由
 const routes = [
-  { path: '/', redirect: '/getup' },
+  { path: '/', redirect: '/huawei' },
+  { path: '/Huawei', component: Huawei },
+  { path: '/iphone', component: require('components/iphone') },
+  { path: '/xiaomi', component: require('components/xiaomi') },
+  { path: '/oppo', component: require('components/oppo') },
+  { path: '/vivo', component: require('components/vivo') },
   { path: '/wordcloud', component: Worldcloud },
   { path: '/building', component: Building },
   { path: '/canteen', component: Canteen },
@@ -34,7 +39,6 @@ const routes = [
   { path: '/interest', component: Interest },
   { path: '/bedroom', component: Bedroom },
   { path: '/graduate', component: Graduate },
-  { path: '/Huawei', component: Huawei },
   { path: '/gotobed', component: Gotobed },
   { path: '/eat', component: Eat },
   { path: '/amuse', component: Amuse },

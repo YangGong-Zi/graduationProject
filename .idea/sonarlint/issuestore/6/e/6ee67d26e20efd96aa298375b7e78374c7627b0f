@@ -1,7 +1,0 @@
-
-qpython:S117("ZRename this local variable "baseXpath" to match the regular expression ^[_a-z][a-z0-9_]*$.(¼®Ì¡
-jpython:S1542"RRename function "getHuaweiUrl" to match the regular expression ^[a-z_][a-z0-9_]*$.(çÐŽŸ
-Dpython:S1481&"'Remove the unused local variable "res".(à’¢îûÿÿÿÿ
-Qpython:S1481"4Remove the unused local variable "phone_infos_list".(‹Ž›äûÿÿÿÿ
-;python:S125"Remove this commented out code.(¢ž¦›þÿÿÿÿ
-6python:S1250"Remove this commented out code.(¡‘¡Ñ

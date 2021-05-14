@@ -44,7 +44,7 @@
             {
               type: 'category',
               boundrayGap: false,
-              data: data.huawei.time
+              data: data.iphone.time
             }
           ],
           yAxis: [
@@ -70,7 +70,7 @@
                   {type: 'min', name: '最小值'}
                 ]
               },
-              data: data.huawei.number
+              data: data.iphone.number
             }
           ]
         });
@@ -94,15 +94,15 @@
             orient: 'vertical',
             left: 5,
             top: 10,
-            data: data.huawei.time,
+            data: data.iphone.time,
           },
           series: [
             {
-              name: '销量',
+              name: '人数',
               type: 'pie',
               radius: '70%',
               center: ['50%', centery],
-              data: data.huawei.numberData,
+              data: data.iphone.numberData,
               itemStyle: {
                 emphasis: {
                   shadowBlur: 10,

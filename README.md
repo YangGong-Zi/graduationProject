@@ -1,12 +1,8 @@
 # graduationProject
-
-
 > 使用vue、echarts等搭建的一个数据展示平台
 > 不支持IE8及其以下版本，单页面应用
 > 基于Vue框架和Python实现了简单的数据可视化
-
 ## 运行步骤
-
 ``` bash
 # 安装依赖
 npm install
@@ -14,11 +10,8 @@ npm install
 # 在本地启动服务，并且通过localhost:8080地址进行访问
 npm run dev
 
-# 编译并压缩代码便于发布
+# 项目打包
 npm run build
-
-# 运行单元测试
-npm run unit
 ```
 
 ## 源码说明

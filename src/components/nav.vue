@@ -15,16 +15,10 @@ export default {
     return {
       items: [
         {name: '华为', ad: 'Huawei'},
-        {name: '苹果', ad: 'interest'},
-        {name: '小米', ad: 'bedroom'},
-        {name: 'OPPO', ad: 'graduate'},
-        {name: 'Vivo', ad: 'Huawei'},
-        {name: '工作日睡觉时间', ad: 'gotobed'},
-        {name: '每日在校吃饭花销', ad: 'eat'},
-        {name: '周末娱乐方式', ad: 'amuse'},
-        {name: '目前是否单身', ad: 'single'},
-        {name: '班群聊天记录分析', ad: 'chat'},
-        {name: '我的群聊活跃时间', ad: 'onlyme'}
+        {name: '苹果', ad: 'iphone'},
+        {name: '小米', ad: 'xiaomi'},
+        {name: 'OPPO', ad: 'oppo'},
+        {name: 'Vivo', ad: 'vivo'}
       ]
     };
   }
