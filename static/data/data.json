@@ -36,7 +36,13 @@
         "name": "Mate30RS"
       }
     ],
-    "price": ["4599","18999","5299","10999","12999"]
+    "price": [
+      "4599",
+      "18999",
+      "5299",
+      "10999",
+      "12999"
+    ]
   },
   "iphone": {
     "time": [
@@ -75,7 +81,13 @@
         "name": "iPhone 12 Pro Max"
       }
     ],
-    "price": ["4799","5499","6299","8499","9299"]
+    "price": [
+      "4799",
+      "5499",
+      "6299",
+      "8499",
+      "9299"
+    ]
   },
   "xiaomi": {
     "time": [
@@ -114,7 +126,13 @@
         "name": "小米11Ultra"
       }
     ],
-    "price": ["4299","3499","4699","4999","6999"]
+    "price": [
+      "4299",
+      "3499",
+      "4699",
+      "4999",
+      "6999"
+    ]
   },
   "OPPO": {
     "time": [
@@ -153,7 +171,13 @@
         "name": "OPPO Find X3 Pro"
       }
     ],
-    "price": ["2699","3399","3999","4999","5999"]
+    "price": [
+      "2699",
+      "3399",
+      "3999",
+      "4999",
+      "5999"
+    ]
   },
   "vivo": {
     "time": [
@@ -192,6 +216,150 @@
         "name": "vivo S9e 5G"
       }
     ],
-    "price": ["3998","4498","5998","3299","2399"]
+    "price": [
+      "3998",
+      "4498",
+      "5998",
+      "3299",
+      "2399"
+    ]
+  },
+  "marketShare": {
+    "Q1": [
+      {
+        "name": "Huawei",
+        "value": 20
+      },
+      {
+        "name": "Oppo",
+        "value": 17
+      },
+      {
+        "name": "Vivo",
+        "value": 17
+      },
+      {
+        "name": "Apple",
+        "value": 10
+      },
+      {
+        "name": "Xiaomi",
+        "value": 8
+      },
+      {
+        "name": "Samsung",
+        "value": 3
+      },
+      {
+        "name": "Other",
+        "value": 25
+      }
+    ],
+    "Q121": [
+      {
+        "name": "Huawei",
+        "value": 16
+      },
+      {
+        "name": "Oppo",
+        "value": 23
+      },
+      {
+        "name": "Vivo",
+        "value": 24
+      },
+      {
+        "name": "Apple",
+        "value": 13
+      },
+      {
+        "name": "Xiaomi",
+        "value": 15
+      },
+      {
+        "name": "Other",
+        "value": 9
+      }
+    ],
+    "2017Q2": [
+      {
+        "name": "Huawei",
+        "value": 20
+      },
+      {
+        "name": "Oppo",
+        "value": 19
+      },
+      {
+        "name": "Vivo",
+        "value": 17
+      },
+      {
+        "name": "Apple",
+        "value": 8
+      },
+      {
+        "name": "Xiaomi",
+        "value": 13
+      },
+      {
+        "name": "Samsung",
+        "value": 3
+      },
+      {
+        "name": "Other",
+        "value": 20
+      }
+    ],
+    "2017Q3": [
+      {
+        "name": "Huawei",
+        "value": "20%"
+      },
+      {
+        "name": "Oppo",
+        "value": "17%"
+      },
+      {
+        "name": "Vivo",
+        "value": "17%"
+      },
+      {
+        "name": "Apple",
+        "value": "10%"
+      },
+      {
+        "name": "Xiaomi",
+        "value": "8%"
+      },
+      {
+        "name": "Samsung",
+        "value": "3%"
+      },
+      {
+        "name": "Other",
+        "value": "25%"
+      }
+    ],
+    "2017Q4": {
+      "bandName": [
+        "Huawei",
+        "Oppo",
+        "Vivo",
+        "Apple",
+        "Xiaomi",
+        "Samsung",
+        "Other"
+      ],
+      "share": [
+        "20%",
+        "17%",
+        "17%",
+        "10%",
+        "8%",
+        "3%",
+        "25%"
+      ]
+    }
   }
 }

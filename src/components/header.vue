@@ -3,7 +3,7 @@
     <div class="top-bar clearfix">
       <div class="topbar-nav">
         <ul class="nav-wrap">
-          <li class="nav">数据分析</li>
+          <li class="nav">数据可视化</li>
         </ul>
       </div>
 <!--      <div v-if="hasLogin" class="topbar-info">-->

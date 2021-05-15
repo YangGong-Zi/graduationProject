@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="getupbar"></div>
-<!--    <div id="getuppie"></div>-->
+    <div id="getuppie"></div>
   </div>
 </template>
 
@@ -51,7 +51,6 @@
             {
               type: 'value',
               name: '销量',
-
             }
           ],
           series: [
@@ -98,7 +97,7 @@
           },
           series: [
             {
-              name: '人数',
+              name: '',
               type: 'pie',
               radius: '70%',
               center: ['50%', centery],

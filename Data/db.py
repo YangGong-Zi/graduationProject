@@ -7,8 +7,8 @@ FilePath: \graduationProject\IM_analyze\db.py
 import pymysql
 import json
 
-# with open("..\\static\\data\\data.json", 'r', encoding='utf-8') as f: #打开json文件
-  # list = json.load(f)
+with open("..\\static\\data\\data.json", 'r', encoding='utf-8') as f: #打开json文件
+  list = json.load(f)
 conn = pymysql.connect(host='localhost', user='root', db='data',
                        passwd='root', charset='utf8', autocommit=True) #配置数据库链接参数
 cur = conn.cursor() #定义游标

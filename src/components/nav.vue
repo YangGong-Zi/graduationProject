@@ -18,7 +18,8 @@ export default {
         {name: '苹果', ad: 'iphone'},
         {name: '小米', ad: 'xiaomi'},
         {name: 'OPPO', ad: 'oppo'},
-        {name: 'Vivo', ad: 'vivo'}
+        {name: 'Vivo', ad: 'vivo'},
+        {name: '市场份额',ad:"market"}
       ]
     };
   }

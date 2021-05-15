@@ -31,6 +31,7 @@ const routes = [
   { path: '/xiaomi', component: require('components/xiaomi') },
   { path: '/oppo', component: require('components/oppo') },
   { path: '/vivo', component: require('components/vivo') },
+  { path: '/market', component: require('components/market') },
   { path: '/wordcloud', component: Worldcloud },
   { path: '/building', component: Building },
   { path: '/canteen', component: Canteen },

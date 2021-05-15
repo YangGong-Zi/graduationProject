@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="getupbar"></div>
     <div id="getuppie"></div>
+<!--    <div id="getupbar"></div>-->
   </div>
 </template>
 
@@ -34,6 +34,9 @@
             right: 15,
             top: 10
           },
+          legend:{
+            data: ["销量","售价"]
+          },
           grid: {
             left: '3%',
             right: '4%',
@@ -44,15 +47,16 @@
             {
               type: 'category',
               boundrayGap: false,
-              data: data.OPPO.time
+              data: data.huawei.time
             }
           ],
           yAxis: [
             {
               type: 'value',
-              name: '销量',
-
+              name: '销量/售价',
+              data:data.huawei.number
             }
+
           ],
           series: [
             {
@@ -70,17 +74,36 @@
                   {type: 'min', name: '最小值'}
                 ]
               },
-              data: data.OPPO.number
+              data: data.huawei.number
+            },
+            {
+              name: '售价',
+              type: 'bar',
+              label: {
+                normal: {
+                  show: true,
+                  position: 'top'
+                }
+              },
+              markPoint: {
+                data: [
+                  {type: 'max', name: '最大值'},
+                  {type: 'min', name: '最小值'}
+                ]
+              },
+              data: data.huawei.price
             }
+
           ]
         });
       },
       drawpie(id, centery) {
         this.chart = echarts.init(document.getElementById(id), 'vintage');
         this.chart.setOption({
-          tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
+          title:{
+            text:"2021年Q1国内手机品牌市场份额",
+            left:"center",
+            top:"25"
           },
           toolbox: {
             feature: {
@@ -90,26 +113,40 @@
             right: 15,
             top: 10
           },
+          tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+          },
           legend: {
-            orient: 'vertical',
-            left: 5,
-            top: 10,
-            data: data.OPPO.time,
+            top: '5%',
+            left: 'center'
           },
           series: [
             {
-              name: '人数',
+              name: '市场份额',
               type: 'pie',
-              radius: '70%',
-              center: ['50%', centery],
-              data: data.OPPO.numberData,
+              radius: ['40%', '70%'],
+              avoidLabelOverlap: false,
               itemStyle: {
-                emphasis: {
-                  shadowBlur: 10,
-                  shadowOffset: 0,
-                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                borderRadius: 10,
+                borderColor: '#fff',
+                borderWidth: 2
+              },
+              label: {
+                show: false,
+                position: 'center'
+              },
+              emphasis: {
+                label: {
+                  show: true,
+                  fontSize: '40',
+                  fontWeight: 'bold'
                 }
-              }
+              },
+              labelLine: {
+                show: false
+              },
+              data: data.marketShare.Q121
             }
           ]
         });
@@ -117,26 +154,25 @@
     },
     mounted() {
       this.$nextTick(function() {
-        this.drawbar('getupbar');
+        this.drawpie('getuppie');
         if (document.body.clientWidth < 470) {
           this.drawpie('getuppie', '70%');
         } else {
           this.drawpie('getuppie', '60%');
         }
-
-        var that = this;
-        var resizeTimer = null;
-        window.onresize = function() {
-          if (resizeTimer) clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(function() {
-            that.drawbar('getupbar');
-            if (document.body.clientWidth < 470) {
-              that.drawpie('getuppie', '70%');
-            } else {
-              that.drawpie('getuppie', '60%');
-            }
-          }, 100);
-        }
+        // var that = this;
+        // var resizeTimer = null;
+        // window.onresize = function() {
+        //   if (resizeTimer) clearTimeout(resizeTimer);
+        //   resizeTimer = setTimeout(function() {
+        //     that.drawbar('getupbar');
+        //     if (document.body.clientWidth < 470) {
+        //       that.drawpie('getuppie', '70%');
+        //     } else {
+        //       that.drawpie('getuppie', '60%');
+        //     }
+        //   }, 100);
+        // }
       });
     }
   }
@@ -150,7 +186,7 @@
     width: 90%;
     height: 600px;
     margin-left: -45%;
-    box-shadow: 0 0 10px #BF382A;
+    /*box-shadow: 0 0 10px #BF382A;*/
     border-radius: 10px;
   }
   #getuppie {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="getupbar"></div>
-<!--    <div id="getuppie"></div>-->
+    <div id="getuppie"></div>
   </div>
 </template>
 
@@ -34,6 +34,9 @@
             right: 15,
             top: 10
           },
+          legend:{
+            data: ["销量","售价"]
+          },
           grid: {
             left: '3%',
             right: '4%',
@@ -50,9 +53,10 @@
           yAxis: [
             {
               type: 'value',
-              name: '销量',
-
+              name: '销量/售价',
+              data:data.huawei.number
             }
+
           ],
           series: [
             {
@@ -71,7 +75,25 @@
                 ]
               },
               data: data.huawei.number
+            },
+            {
+              name: '售价',
+              type: 'bar',
+              label: {
+                normal: {
+                  show: true,
+                  position: 'top'
+                }
+              },
+              markPoint: {
+                data: [
+                  {type: 'max', name: '最大值'},
+                  {type: 'min', name: '最小值'}
+                ]
+              },
+              data: data.huawei.price
             }
+
           ]
         });
       },
@@ -81,6 +103,11 @@
           tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
+          },
+          title:{
+            text:"销量",
+            left:"center",
+            top:"5"
           },
           toolbox: {
             feature: {
@@ -98,7 +125,7 @@
           },
           series: [
             {
-              name: '销量',
+              name: '',
               type: 'pie',
               radius: '70%',
               center: ['50%', centery],
@@ -123,7 +150,6 @@
         } else {
           this.drawpie('getuppie', '60%');
         }
-
         var that = this;
         var resizeTimer = null;
         window.onresize = function() {
@@ -150,7 +176,7 @@
     width: 90%;
     height: 600px;
     margin-left: -45%;
-    box-shadow: 0 0 10px #BF382A;
+    /*box-shadow: 0 0 10px #BF382A;*/
     border-radius: 10px;
   }
   #getuppie {

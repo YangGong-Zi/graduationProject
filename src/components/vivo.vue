@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="getupbar"></div>
-<!--    <div id="getuppie"></div>-->
+    <div id="getuppie"></div>
   </div>
 </template>
 
