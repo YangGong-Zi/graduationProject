@@ -71,6 +71,23 @@
                 ]
               },
               data: data.vivo.number
+            },
+            {
+              name: '售价',
+              type: 'bar',
+              label: {
+                normal: {
+                  show: true,
+                  position: 'top'
+                }
+              },
+              markPoint: {
+                data: [
+                  {type: 'max', name: '最大值'},
+                  {type: 'min', name: '最小值'}
+                ]
+              },
+              data: data.vivo.price
             }
           ]
         });

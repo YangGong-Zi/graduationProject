@@ -19,7 +19,7 @@ export default {
         {name: '小米', ad: 'xiaomi'},
         {name: 'OPPO', ad: 'oppo'},
         {name: 'Vivo', ad: 'vivo'},
-        {name: '市场份额',ad:"market"}
+        // {name: '市场份额',ad:"market"}
       ]
     };
   }
